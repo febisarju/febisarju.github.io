@@ -95,19 +95,24 @@
 
         /* Projects Section */
         .projects-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-        }
+   	 display: flex;
+   	 overflow-x: auto; /* Enable horizontal scrolling */
+    	 white-space: nowrap; /* Prevent line breaks */
+         scroll-behavior: smooth; /* Smooth scrolling */
+    	 gap: 20px;
+         padding: 10px;
+         }
+
         .project {
-            background-color: #222;
-            padding: 20px;
-            width: 300px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(255, 204, 0, 0.5);
-            transition: transform 0.3s ease-in-out;
-        }
+    min-width: 300px; /* Ensures each project takes up space in a single row */
+    flex-shrink: 0; /* Prevents projects from shrinking */
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(255, 204, 0, 0.5);
+    transition: transform 0.3s ease-in-out;
+}
+
         .project:hover {
             transform: scale(1.05);
         }
