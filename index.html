@@ -32,6 +32,21 @@
                 transform: translateY(0);
             }
         }
+        @keyframes scrollProjects {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.projects-container {
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: scrollProjects 15s linear infinite;
+}
 
         /* Header */
         header {
