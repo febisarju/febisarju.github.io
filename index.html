@@ -92,15 +92,14 @@
             max-width: 600px;
             line-height: 1.6;
         }
-
         /* Projects Section */
         .projects-container {
             display: flex;
-            overflow-x: scroll; /* Enable smooth horizontal scrolling */
+            overflow-x: auto; /* Enable smooth horizontal scrolling */
             white-space: nowrap; /* Keep projects in one line */
             scroll-behavior: smooth;
-            gap: 30px;
-            padding: 20px;
+            gap: 20px;
+            padding: 10px;
             scrollbar-width: none; /* Hide scrollbar in Firefox */
             -ms-overflow-style: none; /* Hide scrollbar in Edge/IE */
         }
@@ -112,12 +111,19 @@
 
         .project {
             background-color: #222;
-            padding: 20px;
-            width: 300px;
+            padding: 15px;
+            width: 280px;
             border-radius: 10px;
             box-shadow: 0px 0px 10px rgba(255, 204, 0, 0.5);
             transition: transform 0.3s ease-in-out;
             flex-shrink: 0; /* Prevent projects from shrinking */
+	    white-space: normal; /* Allows text to wrap inside the box */
+  	    word-wrap: break-word; /* Ensures words break properly */
+ 	    overflow: hidden; /* Prevents content from overflowing */
+	    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+     min-height: 180px; /* Prevents text from squishing */
         }
         .project:hover {
             transform: scale(1.05);
@@ -129,6 +135,8 @@
         }
 	.project p {
     font-size: 14px; /* Adjust as needed */
+    line-height: 1.4;
+
 }
         /* Contact Section */
         #contact p {
