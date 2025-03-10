@@ -3,26 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Febi Sarju | Portfolio</title>
+    <title>Febi Sarju | Data Analyst Portfolio</title>
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <style>
-        /* General Styles */
+        /* General Styling */
         body {
             background-color: #000; /* Black background */
             color: #e0e0e0; /* Light gray text */
-            font-family: Arial, sans-serif;
+            font-family: "Arial", sans-serif;
             text-align: center;
             margin: 0;
             padding: 0;
         }
-        
+
         /* Header */
         header {
-            padding: 20px;
             background-color: #111;
+            padding: 20px;
         }
-        h1, h2, h3 {
+        h1 {
             color: #ffcc00;
+            font-size: 2.5em;
+        }
+        p {
+            font-size: 1.2em;
+            margin-top: -10px;
         }
 
         /* Navigation */
@@ -38,7 +43,7 @@
             color: #ffcc00;
             text-decoration: none;
             font-weight: bold;
-            transition: color 0.3s;
+            transition: color 0.3s ease;
         }
         nav ul li a:hover {
             color: #fff;
@@ -46,17 +51,38 @@
 
         /* Sections */
         section {
-            padding: 30px;
+            padding: 50px 20px;
+        }
+        h2 {
+            color: #ffcc00;
+            font-size: 2em;
+            margin-bottom: 15px;
+        }
+
+        /* About Me */
+        #about p {
+            max-width: 600px;
+            margin: auto;
+            line-height: 1.6;
         }
 
         /* Projects */
+        .projects-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
         .project {
             background-color: #222;
             padding: 20px;
-            margin: 15px auto;
-            width: 80%;
+            margin: 15px;
+            width: 300px;
             border-radius: 10px;
             box-shadow: 0px 0px 10px rgba(255, 204, 0, 0.5);
+            transition: transform 0.3s ease-in-out;
+        }
+        .project:hover {
+            transform: scale(1.05);
         }
         .project a {
             color: #ffcc00;
@@ -64,20 +90,31 @@
             font-weight: bold;
         }
 
-        /* Contact Links */
-        a {
+        /* Contact Section */
+        #contact p {
+            font-size: 1.1em;
+        }
+        #contact a {
             color: #ffcc00;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        #contact a:hover {
+            text-decoration: underline;
         }
 
         /* Footer */
         footer {
-            padding: 15px;
             background-color: #111;
+            padding: 15px;
+            font-size: 14px;
             margin-top: 20px;
         }
     </style>
 </head>
 <body>
+
+    <!-- Header -->
     <header>
         <h1>Febi Sarju</h1>
         <p>Data Analyst | Python | SQL | Power BI | Machine Learning</p>
@@ -89,44 +126,57 @@
             </ul>
         </nav>
     </header>
-    
+
+    <!-- About Me -->
     <section id="about">
         <h2>About Me</h2>
-        <p>I am a data analyst passionate about uncovering insights from data.<br>With expertise in Python, SQL, Power BI, and machine learning, I specialize in transforming raw data into actionable strategies.<br>I am always eager to explore new datasets and solve complex business problems through analytics. </p>
+        <p>
+            I am a **data analyst passionate** about **turning data into insights**.  
+            With expertise in **SQL, Python, Power BI, and Machine Learning**,  
+            I enjoy solving complex problems through **data-driven decision-making**.  
+            Always exploring new datasets & eager to tackle **real-world challenges**.
+        </p>
     </section>
 
+    <!-- Projects -->
     <section id="projects">
         <h2>Projects</h2>
-        <div class="project">
-            <h3>💳 FraudScan Analytics: using SQL and Power BI</h3>
-            <p>Uses SQL and Power BI to detect fraud in transactions and visualize insights via a concise dashboard.</p>
-            <a href="https://github.com/febisarju/FraudScan" target="_blank">View Project</a>
-        </div>
-        <div class="project">
-            <h3>🚀 SpaceXplorer: Launch Insights</h3>
-            <p>Analyzing SpaceX launch data from real-time APIs to create interactive dashboard using Streamlit, SQL, and Plotly.</p>
-            <a href="https://github.com/febisarju/SpaceXplorer" target="_blank">View Project</a>
-        </div>
-        <div class="project">
-            <h3>🏠 AirbnbX: Price Prediction Using Regression</h3>
-            <p>Built an ML regression-based model to predict Airbnb rental prices using location, amenities, and demand.</p>
-            <a href="https://github.com/febisarju/AirbnbX" target="_blank">View Project</a>
-        </div>
-        <div class="project">
-            <h3>🕵️‍♂️ CurrencyGuard: CNN-Based Counterfeit Detection</h3>
-            <p>A CNN-based system using Python to detect real vs. counterfeit Indian currency notes, featuring a GUI front-end.</p>
-            <a href="https://github.com/febisarju/CurrencyGuard" target="_blank">View Project</a>
+        <div class="projects-container">
+            <div class="project">
+                <h3>💳 FraudScan Analytics</h3>
+                <p>Uses SQL and Power BI to detect fraud in transactions and visualize insights.</p>
+                <a href="https://github.com/febisarju/FraudScan" target="_blank">View Project</a>
+            </div>
+            <div class="project">
+                <h3>🚀 SpaceXplorer: Launch Insights</h3>
+                <p>Analyzing SpaceX launch data from APIs using Streamlit, SQL, and Plotly.</p>
+                <a href="https://github.com/febisarju/SpaceXplorer" target="_blank">View Project</a>
+            </div>
+            <div class="project">
+                <h3>🏠 AirbnbX: Price Prediction</h3>
+                <p>Built an ML regression model to predict Airbnb prices based on key features.</p>
+                <a href="https://github.com/febisarju/AirbnbX" target="_blank">View Project</a>
+            </div>
+            <div class="project">
+                <h3>🕵️‍♂️ CurrencyGuard</h3>
+                <p>Deep learning model using CNN to detect counterfeit Indian currency.</p>
+                <a href="https://github.com/febisarju/CurrencyGuard" target="_blank">View Project</a>
+            </div>
         </div>
     </section>
 
+    <!-- Contact -->
     <section id="contact">
         <h2>Contact</h2>
-        <p>📧 Email: <a href="mailto:febisarju@gmail.com">email</a></p>
+        <p>📧 Email: <a href="mailto:febisarju@gmail.com">febisarju@gmail.com</a></p>
         <p>🔗 LinkedIn: <a href="https://linkedin.com/in/febi-sarju" target="_blank">Febi Sarju</a></p>
         <p>🐙 GitHub: <a href="https://github.com/febisarju" target="_blank">@febisarju</a></p>
     </section>
+
+    <!-- Footer -->
     <footer>
         <p>&copy; 2025 Febi Sarju | Data Analytics Portfolio</p>
     </footer>
+
 </body>
 </html>
