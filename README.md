@@ -1,4 +1,27 @@
-![coder](https://github.com/user-attachments/assets/4d81a67c-7c5f-4fb3-8ff3-4a172f97bc77)
+
+
+
+![An_anime-style_illustration_resized](https://github.com/user-attachments/assets/e8acb205-1137-4500-87f5-8c058733944f)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <div align="center">
   <img height="150" src="https://media.giphy.com/media/M9gbBd9nbDrOTu1Mqx/giphy.gif"  />
 </div>
