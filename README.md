@@ -32,10 +32,10 @@
 
 Welcome to my GitHub, where I showcase my journey in data analytics and beyond!   
 I’m a data enthusiast hailing from India, blending analytical precision with a love for technology.   
-🔭 **Currently Working As: Data Analyst** – Uncovering insights, crafting dashboards and turning numbers into stories.   
+🔭 **Currently Working** As: **Data Analyst** – Uncovering insights, crafting dashboards and turning numbers into stories.   
 📚 **Learning Journey:** Diving deep into Power BI to master data visualization and business intelligence.   
-💼 **Check out my professional journey** on my [Linkedlin](https://www.linkedin.com/in/febi-sarju/).   
-🌐 **Explore my work** in my [Portfolio](https://febisarju.github.io/) – a showcase of my projects and achievements!   
+💼 **Check out my professional journey** on my **[Linkedlin](https://www.linkedin.com/in/febi-sarju/)**.   
+🌐 **Explore my work** in my **[Portfolio](https://febisarju.github.io/)** – a showcase of my projects and achievements!   
 ⚡ **In My Free Time:** You’ll find me sipping chai, tuning into music and unwinding with coding sessions.   
 
 ###
@@ -97,6 +97,11 @@ I’m a data enthusiast hailing from India, blending analytical precision with a
 ###
 <p>
 
-🌟 Check out my projects and feel free to collaborate! 🚀
+🌟 Feel free to explore my repositories and don't hesitate to reach out if you have any questions or just want to connect/collaborate! 🚀
 
 </p>
+## ✍️ Write something nice in my guest book:
+
+[![Guest Book](https://github.com/user-attachments/assets/f9c3b319-5461-468f-9209-d247ae8542f4)](https://github.com/febisarju/issues/new?assignees=&labels=guestbook&template=guestbook-entry.md&title=New+Guest+Book+Entry)
+
+## Have a good day:)
