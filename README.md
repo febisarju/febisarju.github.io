@@ -90,15 +90,3 @@
 </div>
 
 ###
-
-<div align="center">
-  <img height="200" src=""  />
-</div>
-
-###
-
-<img src="https://raw.githubusercontent.com/febisarju/febisarju/output/snake.svg" alt="Snake animation" />
-
-###
-
-
