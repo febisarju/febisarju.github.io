@@ -30,13 +30,13 @@
 
 ###
 
-Welcome to my GitHub, where I showcase my journey in data analytics and beyond!
+Welcome to my GitHub, where I showcase my journey in data analytics and beyond!   
 I’m a data enthusiast hailing from India, blending analytical precision with a love for technology.
-🔭 **Currently Working As: Data Analyst** – Uncovering insights, crafting dashboards and turning numbers into stories.
-📚 **Learning Journey:** Diving deep into Power BI to master data visualization and business intelligence.
-💼 **Check out my professional journey** on my [Linkedlin](www.linkedin.com/in/febi-sarju/).
-🌐 **Explore my work** in my [Portfolio](https://febisarju.github.io/) – a showcase of my projects and achievements!
-⚡ **In My Free Time:** You’ll find me sipping chai, tuning into music and unwinding with coding sessions.
+- 🔭 **Currently Working As: Data Analyst** – Uncovering insights, crafting dashboards and turning numbers into stories.
+- 📚 **Learning Journey:** Diving deep into Power BI to master data visualization and business intelligence.
+- 💼 **Check out my professional journey** on my [Linkedlin](www.linkedin.com/in/febi-sarju/).
+- 🌐 **Explore my work** in my [Portfolio](https://febisarju.github.io/) – a showcase of my projects and achievements!
+- ⚡ **In My Free Time:** You’ll find me sipping chai, tuning into music and unwinding with coding sessions.
 
 ###
 
