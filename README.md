@@ -1,6 +1,6 @@
 <div align="center">
   <img src="https://github.com/user-attachments/assets/6e49b148-cf45-4f0e-8219-14663e4b514b" /></div>
-###
+
 
 <div align="center">
   <a href="https://www.linkedin.com/in/febi-sarju/" target="_blank">
@@ -14,7 +14,7 @@
   </a>
 </div>
 
-###
+
 
 <div align="center">
   <img src="https://visitor-badge.laobi.icu/badge?page_id=febisarju.febisarju&"  />
