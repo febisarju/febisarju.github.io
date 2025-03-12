@@ -101,36 +101,4 @@
 
 ###
 
-<p align="left"></p>
 
-###
-
-<p align="left"></p>
-
-###
-
-<p align="left"></p>
-
-###
-
-<p align="left"></p>
-
-###
-
-<div align="center">
-  <img src="?theme=dark&spin=false&scan=false&rainbow=false" alt="Widget with the current Spotify song"  />
-</div>
-
-###
-
-<div align="center">
-  <img src="https://spotify-recently-played-readme.vercel.app/api?unique=false" alt="Spotify recently played"  />
-</div>
-
-###
-
-<div align="center">
-  <img src="https://spotify-recently-played-readme.vercel.app/api?count=5" alt="Spotify recently played"  />
-</div>
-
-###
