@@ -83,7 +83,7 @@ I’m a data enthusiast hailing from India, blending analytical precision with a
 ###
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=febisarju&locale=en&hide_title=false&layout=compact&card_width=320&langs_count=10&theme=dracula&hide_border=false&order=2" height="175" alt="languages graph"  />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=febisarju&locale=en&hide_title=false&layout=compact&card_width=320&langs_count=10&theme=dracula&hide_border=false&order=2" height="175" alt="languages graph"  />   
   <img src="https://github-readme-stats.vercel.app/api?username=febisarju&hide_title=false&hide_rank=true&show_icons=true&include_all_commits=true&count_private=true&disable_animations=false&theme=dracula&locale=en&hide_border=false&order=1" height="236" alt="stats graph"  />
 </div>
 
@@ -100,7 +100,7 @@ I’m a data enthusiast hailing from India, blending analytical precision with a
 [![book](https://github.com/user-attachments/assets/b7a7ad41-cd1e-45d8-89ab-c04f5d6bbe93)](https://github.com/febisarju/issues/new?assignees=&labels=guestbook&template=guestbook-entry.md&title=New+Guest+Book+Entry)     
 
 🌟 Feel free to explore my repositories and don't hesitate to reach out if you have any questions or just want to connect/collaborate! 🚀   
-###### Have a good day:)
+##### Have a good day:)
 
 
 
