@@ -94,17 +94,17 @@ I’m a data enthusiast hailing from India, blending analytical precision with a
   <img src="https://github-profile-trophy.vercel.app?username=febisarju&theme=dracula&column=-1&row=1&margin-w=8&margin-h=8&no-bg=false&no-frame=false&order=4" height="150" alt="trophy graph"  />
 </div>
 
-###
-<p>
 
-🌟 Feel free to explore my repositories and don't hesitate to reach out if you have any questions or just want to connect/collaborate! 🚀
-
-</p>
 ## ✍️ Write something nice in my guest book:
 
-[![Guest Book](https://github.com/user-attachments/assets/483ffc45-567e-4cdc-ac72-d340ac0d48ac)](https://github.com/febisarju/issues/new?assignees=&labels=guestbook&template=guestbook-entry.md&title=New+Guest+Book+Entry)  
+[![Guest Book](https://github.com/user-attachments/assets/33464397-0169-48e1-b69d-137a3cfed694)](https://github.com/febisarju/issues/new?assignees=&labels=guestbook&template=guestbook-entry.md&title=New+Guest+Book+Entry)    
 
+🌟 Feel free to explore my repositories and don't hesitate to reach out if you have any questions or just want to connect/collaborate! 🚀   
 ## Have a good day:)
+
+
+
+
 
 
 
