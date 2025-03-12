@@ -102,7 +102,7 @@ I’m a data enthusiast hailing from India, blending analytical precision with a
 </p>
 ## ✍️ Write something nice in my guest book:
 
-[![Guest Book](https://github.com/user-attachments/assets/f9c3b319-5461-468f-9209-d247ae8542f4)](https://github.com/febisarju/issues/new?assignees=&labels=guestbook&template=guestbook-entry.md&title=New+Guest+Book+Entry)
+[![Guest Book](https://github.com/user-attachments/assets/5112d77c-ff60-4b61-99c1-4ce60ce0173a)](https://github.com/febisarju/issues/new?assignees=&labels=guestbook&template=guestbook-entry.md&title=New+Guest+Book+Entry)  
 
-## Have a good day:)![book (3)](https://github.com/user-attachments/assets/f795cd59-33f0-44ee-921f-b5c61ff2d51d)
+## Have a good day:)
 
