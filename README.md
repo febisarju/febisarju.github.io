@@ -1,6 +1,4 @@
-![coder](https://github.com/user-attachments/assets/e75f5019-e300-47c6-b4ed-688b3c7fad19)
-
-
+![coder](https://github.com/user-attachments/assets/6e49b148-cf45-4f0e-8219-14663e4b514b)
 ###
 
 <div align="center">
