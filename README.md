@@ -97,11 +97,10 @@ I’m a data enthusiast hailing from India, blending analytical precision with a
 
 ## ✍️ Write something nice in my guest book:
 
-[![book](https://github.com/user-attachments/assets/3eb71411-5305-44ae-b752-69b9a6dc4b8c)](https://github.com/febisarju/issues/new?assignees=&labels=guestbook&template=guestbook-entry.md&title=New+Guest+Book+Entry)    
+[![book](https://github.com/user-attachments/assets/b7a7ad41-cd1e-45d8-89ab-c04f5d6bbe93)](https://github.com/febisarju/issues/new?assignees=&labels=guestbook&template=guestbook-entry.md&title=New+Guest+Book+Entry)     
 
 🌟 Feel free to explore my repositories and don't hesitate to reach out if you have any questions or just want to connect/collaborate! 🚀   
 ## Have a good day:)
-![book](https://github.com/user-attachments/assets/3eb71411-5305-44ae-b752-69b9a6dc4b8c)
 
 
 
