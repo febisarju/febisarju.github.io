@@ -30,7 +30,7 @@
 
 ###
 
-<p align="left">Welcome to my GitHub, where I showcase my journey in data analytics and beyond!<br>I’m a data enthusiast hailing from India, blending analytical precision with a love for technology. <br>🔭 Currently Working As: <mark>Data Analyst</mark> – Uncovering insights, crafting dashboards and turning numbers into stories.<br>📚 Learning Journey: Diving deep into Power BI to master data visualization and business intelligence.<br>💼 Check out my professional journey on my <p>Linkedlin<a href='www.linkedin.com/in/febi-sarju/'></a>.</p>p><br>🌐 Explore my work in my [Portfolio](https://febisarju.github.io/) – a showcase of my projects and achievements!<br>⚡ In My Free Time: You’ll find me sipping chai, tuning into music and unwinding with coding sessions.</p>
+<p align="left">Welcome to my GitHub, where I showcase my journey in data analytics and beyond!<br>I’m a data enthusiast hailing from India, blending analytical precision with a love for technology. <br>🔭 Currently Working As: <mark>Data Analyst</mark> – Uncovering insights, crafting dashboards and turning numbers into stories.<br>📚 Learning Journey: Diving deep into Power BI to master data visualization and business intelligence.<br>💼 Check out my professional journey on my Linkedlin<a href='www.linkedin.com/in/febi-sarju/'></a>.<br>🌐 Explore my work in my [Portfolio](https://febisarju.github.io/) – a showcase of my projects and achievements!<br>⚡ In My Free Time: You’ll find me sipping chai, tuning into music and unwinding with coding sessions.</p>
 
 ###
 
