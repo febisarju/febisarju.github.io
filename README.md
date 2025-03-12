@@ -1,28 +1,5 @@
-
-
-![An_anime-style_illustration_proportional](https://github.com/user-attachments/assets/e5985430-fe9e-4d02-851e-5ef93d6b4e82)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <div align="center">
-  <img height="150" src="https://media.giphy.com/media/M9gbBd9nbDrOTu1Mqx/giphy.gif"  />
+  <img height="150" src="![coder](https://github.com/user-attachments/assets/e75f5019-e300-47c6-b4ed-688b3c7fad19)"  />
 </div>
 
 ###
