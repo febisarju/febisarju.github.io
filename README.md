@@ -1,4 +1,5 @@
-<div align="center">
+<div align="center">![coder](https://github.com/user-attachments/assets/4d81a67c-7c5f-4fb3-8ff3-4a172f97bc77)
+
   <img height="150" src="https://media.giphy.com/media/M9gbBd9nbDrOTu1Mqx/giphy.gif"  />
 </div>
 
