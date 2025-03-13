@@ -95,7 +95,6 @@ I’m a data enthusiast hailing from India, blending analytical precision with a
 
 ## ✍️ Write something nice in my guest book:
 
-[![Guest Book](https://github.com/febisarju/febisarju.github.io/blob/main/images/guestbook.gif)](https://github.com/febisarju/febisarju.github.io/issues/new?assignees=&labels=guestbook&template=guestbook-entry.md&title=New+Guest+Book+Entry)
 <a href="https://github.com/febisarju/febisarju.github.io/issues/new?assignees=&labels=guestbook&template=guestbook-entry.md&title=New+Guest+Book+Entry">
     <img src="https://github.com/febisarju/febisarju.github.io/blob/main/images/guestbook.gif" width="200">
 </a>
