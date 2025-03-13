@@ -73,7 +73,6 @@ I’m a data enthusiast hailing from India, blending analytical precision with a
   <img width="12" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" height="40" alt="cplusplus logo"  />
   <img width="12" />
-  <img src="https://cdn.simpleicons.org/sqlite/003B57" height="40" alt="sqlite logo"  />
 </div>
 
 ###
