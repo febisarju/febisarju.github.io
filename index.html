@@ -92,6 +92,30 @@
             max-width: 600px;
             line-height: 1.6;
         }
+        /* Skills Section */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.skill {
+    background-color: #222;
+    color: #ffcc00;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    box-shadow: 0px 0px 10px rgba(255, 204, 0, 0.5);
+    transition: transform 0.3s ease-in-out;
+}
+
+.skill:hover {
+    transform: scale(1.1);
+}
+
         /* Projects Section */
         .projects-container {
             display: flex;
@@ -165,10 +189,11 @@
     <!-- Header -->
     <header>
         <h1>Febi Sarju</h1>
-        <p>Data Analyst | Python | SQL | Power BI | ML | Statistics | Math | HTML</p>
+        <p>Data Analyst</p>
         <nav>
             <ul>
                 <li><a href="#about">About</a></li>
+		<li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -186,6 +211,28 @@
             Always exploring new datasets & eager to tackle real-world challenges.
         </p>
     </section>
+<!-- Skills Section -->
+<section id="skills" class="fade-in">
+    <h2>Skills</h2>
+    <div class="skills-container">
+        <span class="skill">Python</span>
+	<span class="skill">R</span>
+	<span class="skill">Data analysis</span>
+        <span class="skill">SQL</span>
+	<span class="skill">Data Visualization</span>
+        <span class="skill">Microsoft Power BI</span>
+        <span class="skill">Machine Learning</span>
+	<span class="skill">Deep Learning</span>
+   	<span class="skill">Predictive Modeling and Analysis</span>      
+        <span class="skill">Statistical Analysis</span>
+        <span class="skill">Mathematics</span>
+        <span class="skill">Microsoft Excel</span>
+        <span class="skill">HTML</span>
+	<span class="skill">C</span>
+	<span class="skill">C++</span>
+    </div>
+</section>
+
 
     <!-- Projects -->
     <section id="projects" class="fade-in">
@@ -233,6 +280,8 @@
             </div>
 	    <div class="project">
             <h2>⏳ More Projects Coming Soon...</h2>
+	    <a href="https://github.com/febisarju" target="_blank">View</a>
+
             </div>
 
         </div>
