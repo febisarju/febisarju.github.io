@@ -1,2 +1,2 @@
-##### Check out my portfolio
+##### Check out my portfolio:
 - https://febisarju.github.io/
