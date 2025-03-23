@@ -47,14 +47,15 @@
         /* Intro Section */
         .intro-container {
             display: flex;
+	    flex-direction: column;
             align-items: left;
             justify-content: center;
             gap: 200px;
             margin-top: 50px;
         }
         .profile-image {
-            width: 500px;
-            height: 500px;
+            width: 180px; /* Adjust size for smaller screens */
+            height: 180px;
             border-radius: 50%;
             border: 3px solid #ffcc00;
         }
@@ -199,11 +200,10 @@
         }
 
 /* Contact Section */
-	/* Contact Section Styling */
 .contact-section {
     display: flex;
     justify-content: center;
-    gap: 30px; /* Space between icons */
+    gap: 30px;
     margin-top: 40px;
 }
 
@@ -226,7 +226,12 @@
     background-color: #ffcc00; /* Change background color */
     transform: scale(1.2); /* Slight zoom effect */
 }
-
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
 /* Responsive Design */
 @media (max-width: 768px) {
     .contact-section {
@@ -237,6 +242,30 @@
         font-size: 2em;
         width: 60px;
         height: 60px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .intro {
+        font-size: 1.2em; /* Reduce font size for mobile */
+    }
+
+    .buttons {
+        flex-direction: column; /* Stack buttons vertically */
+    }
+
+    .button {
+        width: 100%; /* Make buttons full width */
+        text-align: center;
+    }
+
+    .contact-container {
+        flex-direction: column; /* Stack contact icons */
+        align-items: center;
+    }
+
+    .contact-icon {
+        width: 50px;
+        height: 50px;
     }
 }
 
