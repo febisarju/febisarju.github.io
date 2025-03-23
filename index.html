@@ -1,10 +1,11 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Febi Sarju | Portfolio</title>
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
     <style>
         /* General Styles */
         body {
@@ -32,7 +33,58 @@
                 transform: translateY(0);
             }
         }
-
+        /* Typing Animation */
+        .typing {
+            overflow: hidden;
+            white-space: nowrap;
+            width: 0;
+            animation: typing 3s steps(40, end) forwards;
+        }
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+        /* Intro Section */
+        .intro-container {
+            display: flex;
+            align-items: left;
+            justify-content: center;
+            gap: 200px;
+            margin-top: 50px;
+        }
+        .profile-image {
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            border: 3px solid #ffcc00;
+        }
+        .intro {
+            
+            color: #fff;
+            line-height: 1.5;
+            text-align: left;
+        }
+        .buttons {
+            margin-top: 10px;
+            display: flex;
+            gap: 10px;
+        }
+        .button {
+            display: inline-block;
+            background-color: #ffcc00;
+            color: #000;
+            padding: 10px 20px;
+            font-size: 0.9em;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 20px;
+            transition: background-color 0.3s ease-in-out;
+            border: none;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #e6b800;
+        }       
         /* Header */
         header {
             padding: 20px;
@@ -61,12 +113,13 @@
             text-decoration: none;
             font-weight: bold;
             transition: color 0.3s;
+	font-size:1.3em;
         }
         nav ul li a:hover {
             color: #fff;
         }
 
-        /* Sections */
+/* Sections */
         section {
             padding: 50px 20px;
         }
@@ -76,63 +129,26 @@
             margin-bottom: 15px;
         }
 
-        /* About Section */
+/* About Section */
         #about {
             display: flex;
             flex-direction: column;
             align-items: center;
         }
-        #about img {
-            width: 250px;
-            margin-top: 15px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 15px rgba(64, 64, 64, 0.5);
-        }
         #about p {
             max-width: 600px;
             line-height: 1.6;
         }
-        /* Skills Section */
-.skills-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    max-width: 600px;
-    margin: 0 auto;
-}
 
-.skill {
-    background-color: #222;
-    color: #ffcc00;
-    padding: 10px 15px;
-    border-radius: 8px;
-    font-weight: bold;
-    box-shadow: 0px 0px 10px rgba(255, 204, 0, 0.5);
-    transition: transform 0.3s ease-in-out;
-}
 
-.skill:hover {
-    transform: scale(1.1);
-}
-
-        /* Projects Section */
+/* Projects Section */
         .projects-container {
             display: flex;
-            overflow-x: auto; /* Enable smooth horizontal scrolling */
-            white-space: nowrap; /* Keep projects in one line */
-            scroll-behavior: smooth;
+            flex-wrap: wrap;
+            justify-content: center;
             gap: 20px;
             padding: 10px;
-            scrollbar-width: none; /* Hide scrollbar in Firefox */
-            -ms-overflow-style: none; /* Hide scrollbar in Edge/IE */
         }
-
-        /* Hide scrollbar in Chrome, Safari */
-        .projects-container::-webkit-scrollbar {
-            display: none;
-        }
-
         .project {
             background-color: #222;
             padding: 15px;
@@ -140,14 +156,10 @@
             border-radius: 10px;
             box-shadow: 0px 0px 10px rgba(255, 204, 0, 0.5);
             transition: transform 0.3s ease-in-out;
-            flex-shrink: 0; /* Prevent projects from shrinking */
-	    white-space: normal; /* Allows text to wrap inside the box */
-  	    word-wrap: break-word; /* Ensures words break properly */
- 	    overflow: hidden; /* Prevents content from overflowing */
-	    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-     min-height: 180px; /* Prevents text from squishing */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 180px;
         }
         .project:hover {
             transform: scale(1.05);
@@ -157,25 +169,79 @@
             text-decoration: none;
             font-weight: bold;
         }
-	.project p {
-    font-size: 14px; /* Adjust as needed */
-    line-height: 1.4;
-
-}
-        /* Contact Section */
-        #contact p {
-            font-size: 1.1em;
+        .project p {
+            font-size: 14px;
+            line-height: 1.4;
         }
-        #contact a {
-            color: #ffcc00;
-            text-decoration: none;
+
+/* Skills Section */
+	#skills {
+            text-align: center;
+        }
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .skill {
+            background-color: #222;
+            color: #fff;
+            padding: 10px 15px;
+            border-radius: 8px;
             font-weight: bold;
+            box-shadow: 0px 0px 10px rgba(255, 204, 0, 0.5);
+            transition: transform 0.3s ease-in-out;
         }
-        #contact a:hover {
-            text-decoration: underline;
+        .skill:hover {
+            transform: scale(1.1);
         }
 
-        /* Footer */
+/* Contact Section */
+	/* Contact Section Styling */
+.contact-section {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Space between icons */
+    margin-top: 40px;
+}
+
+.contact-section a {
+    font-size: 2.5em; /* Adjust icon size */
+    color: #ffcc00; /* Default icon color */
+    text-decoration: none;
+    background-color: #111; /* Circular background */
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%; /* Makes it circular */
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.contact-section a:hover {
+    color: #000; /* Change icon color */
+    background-color: #ffcc00; /* Change background color */
+    transform: scale(1.2); /* Slight zoom effect */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-section {
+        gap: 15px;
+    }
+    
+    .contact-section a {
+        font-size: 2em;
+        width: 60px;
+        height: 60px;
+    }
+}
+
+
+/* Footer */
         footer {
             background-color: #111;
             padding: 15px;
@@ -185,26 +251,43 @@
     </style>
 </head>
 <body>
-
     <!-- Header -->
     <header>
-        <h1>Febi Sarju</h1>
-        <p>Data Analyst</p>
         <nav>
             <ul>
+<li style="font-size:1.7em; color: white"><b>Febi Sarju's Portfolio</b> </li>
+<li></li><li></li>
+<li></li><li></li>
+<li></li><li></li>
+<li></li><li></li>
+<li></li><li></li>
+<li></li><li></li>
+<li></li><li></li><li></li>
                 <li><a href="#about">About</a></li>
-		<li><a href="#skills">Skills</a></li>
+                <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
+		<li><a href=more.html>More</a></li>
             </ul>
         </nav>
     </header>
-
+    <!-- Intro Section -->
+    <div class="intro-container fade-in">
+        <img src="profile.jpg" alt="Febi Sarju" class="profile-image">
+        <div class="intro">
+       <p style="font-size: 1.2em; color: #ffcc00"><br> HELLO! </p>  
+        <p style="font-size: 3.3em"> I'm <b style="color: #ffcc00">Febi Sarju</b></p>  
+        <div class="typing"><p style="font-size: 1.9em"> A Data Analyst<br>  <br>  </p>  </div>  
+            <div class="buttons">
+                <a href="https://github.com/febisarju" target="_blank" class="button">MY WORKS</a>
+                <a href="https://drive.google.com/file/d/your-resume-link" target="_blank" class="button">RESUME</a>
+            </div>
+        </div>
+    </div>
     <!-- About Me -->
     <section id="about" class="fade-in">
-        <h2>About Me</h2>
-        <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExb2x5ZHkxNnlsaGp6YTJ4N2dzM2F1aGIxbmJ3eHk1OXBrZnNwdXRobCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/SvckSy7fFviqrq8ClF/giphy.gif" alt="Data Analyst GIF">
-        <p><br>
+        <h2>About Me</h2><br>
+        <p>
             I am a data analyst passionate about turning data into insights.  
             With expertise in SQL, Python, Power BI, and Machine Learning,  
             I enjoy solving complex problems through data-driven decision-making.  
@@ -213,31 +296,37 @@
     </section>
 <!-- Skills Section -->
 <section id="skills" class="fade-in">
-    <h2>Skills</h2>
+    <h2>Skills</h2><br>
     <div class="skills-container">
         <span class="skill">Python</span>
 	<span class="skill">R</span>
-	<span class="skill">Data analysis</span>
+	<span class="skill">C</span>
         <span class="skill">SQL</span>
+	<span class="skill">Microsoft Excel</span>
+	<span class="skill">NoSQL</span>
 	<span class="skill">Data Visualization</span>
-        <span class="skill">Microsoft Power BI</span>
+	<span class="skill">Microsoft Power BI</span>
+	<span class="skill">Data analysis</span>
         <span class="skill">Machine Learning</span>
 	<span class="skill">Deep Learning</span>
-   	<span class="skill">Predictive Modeling and Analysis</span>      
+   	<span class="skill">Predictive Analysis</span>      
         <span class="skill">Statistical Analysis</span>
         <span class="skill">Mathematics</span>
-        <span class="skill">Microsoft Excel</span>
-        <span class="skill">HTML</span>
-	<span class="skill">C</span>
-	<span class="skill">C++</span>
+        <span class="skill">Web Design(HTML)</span>
+		
     </div>
 </section>
-
-
     <!-- Projects -->
     <section id="projects" class="fade-in">
         <h2>Projects</h2>
+<div class="about"> <p> I love to solve real-world problems &amp; uncover hidden data stories. </p><br>
+</div>
         <div class="projects-container">
+	   <div class="project">
+                <h3>📈 F1 predictions</h3>
+                <p>A machine learning-driven analysis of stock trends, volatility, and future price movements.</p>
+                <a href="https://github.com/febisarju/TradeSmart" target="_blank">View Project</a>
+            </div>
 	   <div class="project">
                 <h3>📈 TradeSmart: Stock Market trends & predictions</h3>
                 <p>A machine learning-driven analysis of stock trends, volatility, and future price movements.</p>
@@ -263,35 +352,39 @@
                 <p>A deep learning model using CNN to detect counterfeit Indian currency.</p>
                 <a href="https://github.com/febisarju/CurrencyGuard" target="_blank">View Project</a>
             </div>
-	    <div class="project">
-                <h3>🔢 MathVoyage: Journey Through Numbers</h3>
-                <p>A parallax website exploring the beauty of mathematics using HTML, CSS and Javascript.</p>
-                <a href="https://github.com/febisarju/MathVoyage" target="_blank">View Project</a>
-            </div>
-            <div class="project">
-                <h3>🏠 AirbnbX: Price Prediction</h3>
-                <p>A ML regression model to predict Airbnb prices based on key features.</p>
-                <a href="https://github.com/febisarju/AirbnbX" target="_blank">View Project</a>
-            </div>
 	     <div class="project">
                 <h3>📋 Dotify: Task Manager</h3>
                 <p>A simple yet powerful to-do list application with priority-based task management using html and css.</p>
                 <a href="https://github.com/febisarju/Dotify" target="_blank">View Project</a>
             </div>
-	    <div class="project">
-            <h2>⏳ More Projects Coming Soon...</h2>
-	    <a href="https://github.com/febisarju" target="_blank">View</a>
-            </div>
-        </div>
-    </section>
+        </div></section>
+<a href="https://github.com/febisarju" target="_blank" class="button">View More Projects on Github</a>
 
-    <!-- Contact -->
-    <section id="contact" class="fade-in">
-        <h2>Contact</h2>
-        <p>📧 Email: <a href="mailto:febisarju@gmail.com">febisarju@gmail.com</a></p>
-        <p>🔗 LinkedIn: <a href="https://linkedin.com/in/febi-sarju" target="_blank">Febi Sarju</a></p>
-        <p>🐙 GitHub: <a href="https://github.com/febisarju" target="_blank">@febisarju</a></p>
-    </section>
+    <!-- Contact Section -->
+<section id="contact" class="fade-in">
+    <h2>Contact</h2>
+    <p>Below are the details to reach out to me!</p><br>
+
+    <div class="contact-section">
+    <a href="https://www.google.com/maps/place/Bangalore" target="_blank">
+        <i class="fas fa-map-marker-alt"></i>
+    </a>
+    <a href="mailto:febi.sarju@gmail.com">
+        <i class="fas fa-envelope"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/febi-sarju/" target="_blank">
+        <i class="fab fa-linkedin"></i>
+    </a>
+    <a href="https://github.com/febisarju" target="_blank">
+        <i class="fab fa-github"></i>
+    </a>
+    <a href="https://www.instagram.com/febi.sarju/?hl=en" target="_blank">
+        <i class="fab fa-instagram"></i>
+    </a>
+</div>
+
+</section>
+
 
     <!-- Footer -->
     <footer>
