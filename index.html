@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Febi Sarju | Portfolio</title>
+    <title>Febi Sarju's Portfolio</title>
+    <script src="https://cdn.tailwindcss.com">
+  </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">	
     <style>
         /* General Styles */
@@ -50,12 +52,6 @@
             justify-content: center;
             gap: 200px;
             margin-top: 50px;
-        }
-        .profile-image {
-            width: 400px;
-            height: 400px;
-            border-radius: 50%;
-            border: 3px solid #ffcc00;
         }
         .intro {
             
@@ -124,8 +120,8 @@
         }
         h2 {
             color: #ffcc00;
-            font-size: 2em;
-            margin-bottom: 15px;
+            font-size: 3em;
+            margin-bottom: 9px;
         }
 
 /* About Section */
@@ -249,36 +245,58 @@
     </style>
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <nav>
-            <ul>
-<li style="font-size:1.7em; color: white"><b>Febi Sarju's Portfolio</b> </li>
-<li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-		<li><a href=more.html>More</a></li>
-            </ul>
-        </nav>
-    </header>
-    <!-- Intro Section -->
-    <div class="intro-container fade-in">
-        <img src="C:\Users\febi2\febisarju.github.io\febisarju.github.io\profile\images\profile.jpg" alt="Febi" class="profile-image">
-        <div class="intro">
-       <p style="font-size: 1.2em; color: #ffcc00"><br> HELLO! </p>  
+  <header class="flex justify-between items-center p-4 bg-black">
+   <h1 class="text-white text-lg">
+    Febi Sarju's Portfolio
+   </h1>
+   <nav>
+    <ul class="flex space-x-4 text-yellow-500">
+     <li>
+      <a class="hover:text-yellow-300" href="#about">
+       About
+      </a>
+     </li>
+     <li>
+      <a class="hover:text-yellow-300" href="#skills">
+       Skills
+      </a>
+     </li>
+     <li>
+      <a class="hover:text-yellow-300" href="#projects">
+       Projects
+      </a>
+     </li>
+     <li>
+      <a class="hover:text-yellow-300" href="#contact">
+       Contact
+      </a>
+     </li>
+     <li>
+      <a class="hover:text-yellow-300" href="more.html">
+       More
+      </a>
+     </li>
+    </ul>
+   </nav>
+  </header>
+  <main class="flex flex-col items-center justify-center min-h-screen text-center">
+   <div class="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-8">
+    <div class="rounded-full border-2 border-yellow-500 overflow-hidden w-100 h-100">
+     <img alt="profile" class="w-full h-full object-cover" src="C:\Users\febi2\febisarju.github.io\febisarju.github.io\profile\images\profile.jpg"/>
+    </div>
+    <div class="text-left">
+     <p style="font-size: 1.2em; color: #ffcc00"><br> HELLO! </p>  
         <p style="font-size: 3.3em"> I'm <b style="color: #ffcc00">Febi Sarju</b></p>  
         <div class="typing"><p style="font-size: 1.9em"> A Data Analyst<br>  <br>  </p>  </div>  
-            <div class="buttons">
+     <div class="buttons">
                 <a href="https://github.com/febisarju" target="_blank" class="button">MY WORKS</a>
                 <a href="https://drive.google.com/file/d/1h9JvukBlORlBVb9D7vtoiFgGG6yO52bt/view?usp=sharing" target="_blank" class="button">RESUME</a>
             </div>
-        </div>
-    </div>
+  </main>
+  
     <!-- About Me -->
     <section id="about" class="fade-in">
-        <h2>About Me</h2><br>
+         <h2 class="text-2xl font-bold text-yellow-500 mb-4">About Me</h2>
         <p>
             I am a data analyst passionate about turning data into insights.  
             With expertise in SQL, Python, Power BI, and Machine Learning,  
@@ -288,7 +306,7 @@
     </section>
 <!-- Skills Section -->
 <section id="skills" class="fade-in">
-    <h2>Skills</h2><br>
+    <h2 class="text-2xl font-bold text-yellow-500 mb-4">Skills</h2>
     <div class="skills-container">
         <span class="skill">Python</span>
 	<span class="skill">R</span>
@@ -309,7 +327,7 @@
 </section>
     <!-- Projects -->
     <section id="projects" class="fade-in">
-        <h2>Projects</h2>
+        <h2 class="text-2xl font-bold text-yellow-500 mb-4">Projects</h2>
 <div class="about"> <p> I love to solve real-world problems &amp; uncover hidden data stories. </p><br>
 </div>
         <div class="projects-container">
@@ -353,7 +371,7 @@
 
     <!-- Contact Section -->
 <section id="contact" class="fade-in">
-    <h2>Contact</h2>
+    <h2 class="text-2xl font-bold text-yellow-500 mb-4">Contact</h2>
     <p>Below are the details to reach out to me!</p><br>
 
     <div class="contact-section">
@@ -379,7 +397,7 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Febi Sarju | Portfolio</p>
+        <p>&copy; 2025 by Febi Sarju | Portfolio</p>
     </footer>
 
 </body>
