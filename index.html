@@ -9,6 +9,46 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">	
     <style>
         /* General Styles */
+	header {
+    padding: 15px 20px; 
+    background-color: #222; 
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0px 4px 10px rgba(255, 204, 0, 0.5); 
+    z-index: 1000; 
+}
+        h1 {
+            color: #ffcc00;
+            font-size: 2.5em;
+        }
+        p {
+            font-size: 1.2em;
+            margin-top: -10px;
+        }
+
+        /* Navigation */
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #ffcc00;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+	font-size:1.3em;
+        }
+        nav ul li a:hover {
+            color: #fff;
+        }
+	    
         body {
             background-color: #000;
             color: #e0e0e0;
@@ -16,6 +56,7 @@
             text-align: center;
             margin: 0;
             padding: 0;
+	    padding-top: 70px;
         }
 
         /* Smooth Animations */
@@ -34,6 +75,7 @@
                 transform: translateY(0);
             }
         }
+	    
         /* Typing Animation */
         .typing {
             overflow: hidden;
@@ -45,6 +87,7 @@
             from { width: 0; }
             to { width: 100%; }
         }
+	    
         /* Intro Section */
         .intro-container {
             display: flex;
@@ -80,44 +123,6 @@
         .button:hover {
             background-color: #e6b800;
         }       
-        /* Header */
-        header {
-            padding: 20px;
-	    background-color: #222;
-            text-align: center;
-	    position: fixed;
-            left: 0;
-            width: 100%;
-        }
-	
-        h1 {
-            color: #ffcc00;
-            font-size: 2.5em;
-        }
-        p {
-            font-size: 1.2em;
-            margin-top: -10px;
-        }
-
-        /* Navigation */
-        nav ul {
-            list-style: none;
-            padding: 0;
-        }
-        nav ul li {
-            display: inline;
-            margin: 0 15px;
-        }
-        nav ul li a {
-            color: #ffcc00;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s;
-	font-size:1.3em;
-        }
-        nav ul li a:hover {
-            color: #fff;
-        }
 
 /* Sections */
         section {
@@ -140,7 +145,30 @@
             line-height: 1.6;
         }
 
-
+/* Skills Section */
+	#skills {
+            text-align: center;
+        }
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .skill {
+            background-color: #222;
+            color: #fff;
+            padding: 10px 15px;
+            border-radius: 8px;
+            font-weight: bold;
+            box-shadow: 0px 0px 10px rgba(255, 204, 0, 0.5);
+            transition: transform 0.3s ease-in-out;
+        }
+        .skill:hover {
+            transform: scale(1.1);
+        }
+	    
 /* Projects Section */
         .projects-container {
             display: flex;
@@ -174,56 +202,32 @@
             line-height: 1.4;
         }
 
-/* Skills Section */
-	#skills {
-            text-align: center;
-        }
-        .skills-container {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        .skill {
-            background-color: #222;
-            color: #fff;
-            padding: 10px 15px;
-            border-radius: 8px;
-            font-weight: bold;
-            box-shadow: 0px 0px 10px rgba(255, 204, 0, 0.5);
-            transition: transform 0.3s ease-in-out;
-        }
-        .skill:hover {
-            transform: scale(1.1);
-        }
-
 /* Contact Section */
 .contact-section {
     display: flex;
     justify-content: center;
-    gap: 30px; /* Space between icons */
+    gap: 30px; 
     margin-top: 40px;
 }
 
 .contact-section a {
-    font-size: 2.5em; /* Adjust icon size */
-    color: #ffcc00; /* Default icon color */
+    font-size: 2.5em; 
+    color: #ffcc00; 
     text-decoration: none;
-    background-color: #111; /* Circular background */
+    background-color: #111;
     width: 70px;
     height: 70px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 50%; /* Makes it circular */
+    border-radius: 50%; 
     transition: transform 0.3s ease-in-out, color 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
 .contact-section a:hover {
-    color: #000; /* Change icon color */
-    background-color: #ffcc00; /* Change background color */
-    transform: scale(1.2); /* Slight zoom effect */
+    color: #000; 
+    background-color: #ffcc00; 
+    transform: scale(1.2); 
 }
 
 /* Responsive Design */
@@ -251,9 +255,9 @@
   font-size: 0.5em;
   padding: 10px 0;
 }
-
-    </style>
+</style>
 </head>
+	
 <body>
   <header class="flex justify-between items-center p-4 bg-black">
    <h1 class="text-white text-lg">
@@ -318,6 +322,7 @@
             Always exploring new datasets & eager to tackle real-world challenges.
         </p>
     </section>
+	    
 <!-- Skills Section -->
 <section id="skills" class="fade-in">
     <h2 class="text-2xl font-bold text-yellow-500 mb-4">Skills</h2>
