@@ -160,11 +160,12 @@
         }
 	    
 /* Projects Section */
-        .projects-container {
+       .projects-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    grid-template-columns: repeat(2, 1fr); /* Exactly 2 projects per row */
     gap: 20px;
     padding: 10px;
+    justify-content: center;
 }
         .project {
             background-color: #222;
@@ -274,7 +275,7 @@
     <div class="text-left">
      <p style="font-size: 1.2em; color: #ffcc00"><br> HELLO! </p>  
         <p style="font-size: 3.3em"> I'm <b style="color: #ffcc00">Febi Sarju</b></p>  
-        <div class="typing"><p style="font-size: 1.9em"> Aspiring Data Analyst/ Data Scientist<br>  <br>  </p>  </div>  
+        <div class="typing"><p style="font-size: 1.9em"> An Aspiring Data Analyst + Data Scientist<br>  <br>  </p>  </div>  
      <div class="buttons">
                 <a href="https://github.com/febisarju" target="_blank" class="button">MY WORKS</a>
                 <a href="https://drive.google.com/file/d/1h9JvukBlORlBVb9D7vtoiFgGG6yO52bt/view?usp=sharing" target="_blank" class="button">RESUME</a>
@@ -286,10 +287,13 @@
 	
          <h2 class="text-2xl font-bold text-yellow-500 mb-4">About Me</h2>
         <p>
-            I am a data analyst passionate about turning data into insights.  
-            With expertise in SQL, Python, Power BI, and Machine Learning,  
-            I enjoy solving complex problems through data-driven decision-making.  
-            Always exploring new datasets & eager to tackle real-world challenges.
+            I turn coffee into code and data into decisions! ☕📊  
+        As a <b>Data Analyst & Aspiring Data Scientist</b>,  
+        I dive deep into messy datasets so you don’t have to.  
+        Skilled in <b>SQL, Python, Power BI, and Machine Learning</b>,  
+        I turn numbers into insights and insights into action.  
+        When I’m not analyzing data, I’m probably optimizing my caffeine intake.  
+        Let’s make data work smarter, not harder! 🚀
         </p>
     </section><br>
 	    
@@ -320,9 +324,13 @@
 </div>
         <div class="projects-container">
 	   <div class="project">
-    <img src="images/project1.jpg" alt="Project Image" class="project-thumbnail">
-    <h3>F1 Predictions</h3>
-    <p>Using ML models to predict Formula 1 race results...</p>
+    <h3>🏎️ RaceCraft 2025: The F1 Prediction Engine</h3>
+    <p>A machine learning project predicting Formula 1 race outcomes for the 2025 season with real-time updates and interactive visualizations.</p>
+                <a href="https://github.com/febisarju/RaceCraft2025" target="_blank">View Project</a>
+            </div>
+	<div class="project">
+                <h3>📈 TradeSmart: Stock Market trends & predictions</h3>
+                <p>A machine learning-driven analysis of stock trends, volatility and future price movements.</p>
                 <a href="https://github.com/febisarju/TradeSmart" target="_blank">View Project</a>
             </div>
 	    <div class="project">
@@ -331,6 +339,11 @@
                 <a href="https://github.com/febisarju/UberRide" target="_blank">View Project</a>
             </div>
             <div class="project">
+               <h3>💳 FraudScan Analytics</h3>
+                <p>Uses SQL and Power BI to detect fraud in transactions and visualize insights.</p>
+                <a href="https://github.com/febisarju/FraudScan" target="_blank">View Project</a>
+            </div>
+	            <div class="project">
                 <h3>🚀 SpaceXplorer: Launch Insights</h3>
                 <p>Analyzing SpaceX launch data from APIs using Streamlit, SQL and Plotly.</p>
                 <a href="https://github.com/febisarju/SpaceXplorer" target="_blank">View Project</a>
