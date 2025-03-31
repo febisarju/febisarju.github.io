@@ -165,7 +165,11 @@
     grid-template-columns: repeat(2, 1fr); /* Exactly 2 projects per row */
     gap: 20px;
     padding: 10px;
-    justify-content: center;
+    justify-items: center; /* Center all items */
+}
+
+.projects-container .project:nth-child(odd):last-child {
+    grid-column: span 2; /* Make the last project take up full width on odd rows */
 }
         .project {
             background-color: #222;
