@@ -162,51 +162,40 @@
 /* Projects Section */
 .projects-container {
     display: flex;
-    flex-direction: column; 
-    align-items: center; 
+    flex-wrap: wrap;
+    justify-content: center; /* Centers content */
     gap: 20px;
-    justify-content: center;
-    width: 100%;
 }
-
-.project {
-    background-color: #222;
-    padding: 15px;
-    width: 50%; 
-    max-width: 600px; 
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(255, 204, 0, 0.5);
-    transition: transform 0.3s ease-in-out;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-height: 180px;
-    text-align: center;
-}
-
-.project:hover {
-    transform: scale(1.05);
-}
-
-.project a {
-    color: #ffcc00;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.project p {
-    font-size: 14px;
-    line-height: 1.4;
-}
-
-.project-thumbnail {
+        .project {
+            background-color: #222;
+            padding: 15px;
+            width: calc(50% - 200px);
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(255, 204, 0, 0.5);
+            transition: transform 0.3s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 180px;
+        }
+        .project:hover {
+            transform: scale(1.05);
+        }
+        .project a {
+            color: #ffcc00;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .project p {
+            font-size: 14px;
+            line-height: 1.4;
+        }
+	.project-thumbnail {
     width: 50px;
     height: 50px;
     border-radius: 5px;
-    margin: 0 auto 10px; 
-    display: block;
+    margin-right: 10px;
 }
-
 	
 /* Contact Section */
 .contact-section {
@@ -262,8 +251,8 @@
 }
 </style>
 </head>
-<body class="bg-gray-100">
-    <!-- Header -->
+	
+<body>
  <header class="fixed top-0 left-0 w-full bg-[#222] text-white shadow-lg z-50 p-2">
 
    <div class="scrolling-header-container mt-0">
@@ -276,6 +265,7 @@
      <li> <a class="hover:text-yellow-300" href="more.html"> MORE </a> </li>
     </ul>
    </nav></header>
+  
   <main class="flex flex-col items-center justify-center min-h-screen text-center">
    <div class="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-8">
     <div class="rounded-full border-2 border-yellow-500 overflow-hidden w-100 h-100">
@@ -325,7 +315,7 @@
         <span class="skill">Statistical Analysis</span>
         <span class="skill">Mathematics</span>
         <span class="skill">Web Design (HTML)</span>		
-</section> <br>
+</section> <br>   
     <!-- Projects -->
     <section id="projects" class="fade-in">
         <h2 class="text-2xl font-bold text-yellow-500 mb-4">Projects</h2>
