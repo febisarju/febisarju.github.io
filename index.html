@@ -160,21 +160,16 @@
         }
 	    
 /* Projects Section */
-       .projects-container {
-    display: grid;
-    grid-template-columns: repeat(2, 0.5fr);
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
     gap: 20px;
-    padding: 10px;
-    justify-items: center; 
-}
-
-.projects-container .project:nth-child(odd):last-child {
-    grid-column: span 1;/
 }
         .project {
             background-color: #222;
             padding: 15px;
-            width: 273px;
+            width: calc(50% - 200px);
             border-radius: 10px;
             box-shadow: 0px 0px 10px rgba(255, 204, 0, 0.5);
             transition: transform 0.3s ease-in-out;
@@ -201,7 +196,7 @@
     border-radius: 5px;
     margin-right: 10px;
 }
-
+	
 /* Contact Section */
 .contact-section {
     display: flex;
@@ -324,42 +319,48 @@
     <!-- Projects -->
     <section id="projects" class="fade-in">
         <h2 class="text-2xl font-bold text-yellow-500 mb-4">Projects</h2>
-<div class="about"> <p> I love to solve real-world problems &amp; uncover hidden data stories. <br> </p>
+<div class="about"> <p> I love to solve real-world problems &amp; uncover hidden data stories.<br><br> </p>
 </div>
         <div class="projects-container">
 	   <div class="project">
-    <h3>🏎️ RaceCraft 2025: The F1 Prediction Engine<br></h3>
+    <h2><b>🏎️ RaceCraft 2025: The F1 Prediction Engine</b></h2>
     <p>A machine learning project predicting Formula 1 race outcomes for the 2025 season with real-time updates and interactive visualizations.</p>
                 <a href="https://github.com/febisarju/RaceCraft2025" target="_blank">View Project</a>
             </div>
 	<div class="project">
-                <h3>📈 TradeSmart: Stock Market trends & predictions</h3>
-                <p>A machine learning-driven analysis of stock trends, volatility and future price movements.</p>
+		<img src="C:\Users\febi2\OneDrive\Pictures\Screenshots\Screenshot 2025-04-01 203657.png" alt="Project Image"><br>
+                <h2><b>📈 TradeSmart: Stock Market trends & predictions</b></h2>
+                <p>Built a machine learning-powered stock prediction model with Random Forest and Flask API for real-time forecasts with a historical dataset. Also, created streamlit with live stock data (yfinance).</p>
                 <a href="https://github.com/febisarju/TradeSmart" target="_blank">View Project</a>
             </div>
 	    <div class="project">
-                <h3>🚖 UberRide: Unlocking Ride Patterns & Predictions</h3>
-                <p>Analyzing Uber ride patterns and forecasting demand using machine learning.</p>
+		<img src="C:\Users\febi2\OneDrive\Pictures\Screenshots\Screenshot 2025-03-27 234026.png" alt="Project Image"><br>
+                <h2><b>🚖 UberRide: Unlocking Ride Patterns & Predictions</b></h2>
+                <p>Built a time-series forecasting model using XGBoost, GBRT, and Random Forest to predict Uber trip demand. Implemented feature engineering, ensemble learning and Power BI visualizations for insights.</p>
                 <a href="https://github.com/febisarju/UberRide" target="_blank">View Project</a>
             </div>
             <div class="project">
-               <h3>💳 FraudScan Analytics</h3>
-                <p>Uses SQL and Power BI to detect fraud in transactions and visualize insights.</p>
+		<img src="C:\Users\febi2\OneDrive\Pictures\Screenshots\Screenshot 2025-03-28 145255.png" alt="Project Image"><br>
+               <h2><b>💳 FraudScan Analytics</b></h2>
+                <p>This project detects fraudulent transactions using SQL and Power BI, analyzing spending patterns and high-risk customers with visual insights.</p>
                 <a href="https://github.com/febisarju/FraudScan" target="_blank">View Project</a>
             </div>
 	            <div class="project">
-                <h3>🚀 SpaceXplorer: Launch Insights</h3>
-                <p>Analyzing SpaceX launch data from APIs using Streamlit, SQL and Plotly.</p>
+		<img src="C:\Users\febi2\OneDrive\Pictures\Screenshots\Screenshot 2025-04-01 182146.jpg" alt="Project Image"><br>
+                <h2><b>🚀 SpaceXplorer: Launch Insights</b></h2>
+                <p>Developed a SpaceX Launch Dashboard with Streamlit, SQL & Plotly, integrating real-time API data for interactive analysis of launch trends, success rates, mission insights, etc.</p>
                 <a href="https://github.com/febisarju/SpaceXplorer" target="_blank">View Project</a>
             </div>
             <div class="project">
-                <h3>🕵️‍♂️ CurrencyGuard: Counterfeit Detection</h3>
-                <p>A deep learning model using CNN to detect counterfeit Indian currency.</p>
+		<img src="C:\Users\febi2\OneDrive\Pictures\Screenshots\Screenshot 2024-09-19 164911.png" alt="Project Image"><br>
+                <h2><b>🕵️‍♂️ CurrencyGuard: Counterfeit Detection</b></h2>
+                <p>This project implements a currency detection system to distinguish between real and counterfeit Indian currency notes by Convolutional Neural Network (CNN) using python programming language as back-end and graphical user interface (GUI) as front-end.</p>
                 <a href="https://github.com/febisarju/CurrencyGuard" target="_blank">View Project</a>
             </div>
-	     <div class="project">
-                <h3>📋 Dotify: Task Manager<br></h3>
-                <p>A simple yet powerful to-do list application with priority-based task management using html and css.</p>
+	     <div class="project" style="display: flex; flex-direction: column; justify-content: center; align-items: center; smargin: 5px;">
+		<img src="C:\Users\febi2\OneDrive\Pictures\Screenshots\Screenshot 2025-03-10 174908.png" alt="Project Image"><br>
+                <h2><b>📋 Dotify: Task Manager</b></h2>
+                <p>Developed a responsive and interactive To-Do List web application using HTML and CSS. The application enables users to add, prioritize and manage tasks efficiently.</p>
                 <a href="https://github.com/febisarju/Dotify" target="_blank">View Project</a>
             </div>
         </div></section>
