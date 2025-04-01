@@ -113,7 +113,9 @@
         .button:hover {
             background-color: #e6b800;
         }       
-
+	.dropdown:hover .dropdown-menu {
+            display: block;
+        }
 /* Sections */
         section {
             padding: 50px 20px;
@@ -262,20 +264,22 @@
 }
 </style>
 </head>
-	
-<body>
- <header class="fixed top-0 left-0 w-full bg-[#222] text-white shadow-lg z-50 p-2">
-
-   <div class="scrolling-header-container mt-0">
-<nav>
-    <ul class="flex space-x-4 text-yellow-500">
-     <li> <a class="hover:text-yellow-300" href="#about"> ABOUT </a> </li>
-     <li> <a class="hover:text-yellow-300" href="#skills"> SKILLS </a> </li>
-     <li> <a class="hover:text-yellow-300" href="#projects"> PROJECTS </a> </li>
-     <li> <a class="hover:text-yellow-300" href="#contact"> CONTACT </a> </li>
-     <li> <a class="hover:text-yellow-300" href="more.html"> MORE </a> </li>
-    </ul>
-   </nav></header>
+<body class="bg-gray-100">
+    <!-- Header -->
+    <header class="flex justify-between items-center p-5 bg-white shadow-md fixed w-full top-0 z-50">
+        <h1 class="text-xl font-bold text-gray-800">Febi Sarju</h1>
+        
+        <div class="relative dropdown">
+            <button class="px-4 py-2 bg-gray-800 text-white rounded-lg">Menu</button>
+            <div class="dropdown-menu absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg hidden">
+                <a href="#about" class="block px-4 py-2 hover:bg-gray-200">About</a>
+                <a href="#skills" class="block px-4 py-2 hover:bg-gray-200">Skills</a>
+                <a href="#projects" class="block px-4 py-2 hover:bg-gray-200">Projects</a>
+                <a href="#contact" class="block px-4 py-2 hover:bg-gray-200">Contact</a>
+                <a href="#more" class="block px-4 py-2 hover:bg-gray-200">More</a>
+            </div>
+        </div>
+    </header>
   
   <main class="flex flex-col items-center justify-center min-h-screen text-center">
    <div class="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-8">
@@ -375,9 +379,9 @@
                 <a href="https://github.com/febisarju/Dotify" target="_blank">View Project</a>
             </div>
         </div></section>
-<a href="https://github.com/febisarju" target="_blank" class="button">View More Projects on Github</a>
+<br><br><br><a href="https://github.com/febisarju" target="_blank" class="button">View More Projects on Github</a>
 <br><br><br><br><br><br><br>
-<img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExdnJnNHp4YTRmMjhra2pycWp1dmhlMWl6NzVwenRubGpvdG9sdHAwYSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/SvckSy7fFviqrq8ClF/giphy.gif" alt="Centered Image" style="width:200px; height:200px; display:block; margin:0 auto;"><br><br><br>
+<img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExdnJnNHp4YTRmMjhra2pycWp1dmhlMWl6NzVwenRubGpvdG9sdHAwYSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/SvckSy7fFviqrq8ClF/giphy.gif" alt="Centered Image" style="width:200px; height:200px; display:block; margin:0 auto;"><br><br><br><br><br>
 
     <!-- Contact Section -->
 <section id="contact" class="fade-in">
