@@ -1,428 +1,679 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Febi Sarju's Portfolio</title>
-    <script src="https://cdn.tailwindcss.com">
-  </script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">	
+    <title>Febi's Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-	    
-    /* General Styles */
-        h1 {
-            color: #ffcc00;
-            font-size: 2.5em;
+        :root {
+            --primary-color: #ffc107; /* Yellow */
+            --primary-hover: #ffca28; /* Lighter yellow */
+            --dark-color: #ffffff;
+            --light-color: #000000;
+            --gray-color: #a0a0a0;
         }
-        p {
-            font-size: 1.2em;
-            margin-top: -10px;
-        }
-
-        /* Navigation */
-        nav ul {
-            list-style: none;
+        
+        * {
+            margin: 0;
             padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-        nav ul li {
-            display: inline;
-            margin: 0 15px;
-        }
-        nav ul li a {
-            color: #ffcc00;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s;
-	font-size:1.3em;
-        }
-        nav ul li a:hover {
-            color: #fff;
-        }
-	    
-body {
-    background-color: #000;
-    color: #e0e0e0;
-    font-family: Arial, sans-serif;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-}
-
-
-        /* Smooth Animations */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
-            animation: fadeInUp 1s ease-in-out forwards;
-        }
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-	    
-        /* Typing Animation */
-        .typing {
-            overflow: hidden;
-            white-space: nowrap;
-            width: 0;
-            animation: typing 5s steps(40, end) forwards;
-        }
-        @keyframes typing {
-            from { width: 0; }
-            to { width: 100%; }
-        }
-	    
-        /* Intro Section */
-        .intro-container {
-            display: flex;
-            align-items: left;
-            justify-content: center;
-            gap: 200px;
-            margin-top: 50px;
-        }
-        .intro {
-            
-            color: #fff;
-            line-height: 1.5;
-            text-align: left;
-        }
-        .buttons {
-            margin-top: 10px;
-            display: flex;
-            gap: 10px;
-        }
-        .button {
-            display: inline-block;
-            background-color: #ffcc00;
-            color: #000;
-            padding: 10px 20px;
-            font-size: 0.9em;
-            font-weight: bold;
-            text-decoration: none;
-            border-radius: 20px;
-            transition: background-color 0.3s ease-in-out;
-            border: none;
-            cursor: pointer;
-        }
-        .button:hover {
-            background-color: #e6b800;
-        }       
-
-/* Sections */
-        section {
-            padding: 50px 20px;
-        }
-        h2 {
-            color: #ffcc00;
-            font-size: 3em;
-            margin-bottom: 9px;
-        }
-
-/* About Section */
-        #about {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        #about p {
-            max-width: 600px;
+        
+        body {
+            background-color: var(--light-color);
+            color: var(--dark-color);
             line-height: 1.6;
         }
-
-/* Skills Section */
-	#skills {
-            text-align: center;
+        
+        a {
+            text-decoration: none;
+            color: inherit;
         }
-        .skills-container {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            max-width: 600px;
+        
+        /* Header Styles */
+        header {
+            background-color: #121212;
+            box-shadow: 0 2px 4px rgba(255,255,255,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 2rem;
+        }
+        
+        .nav-links a {
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+        
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+        }
+        
+        /* Hero Section */
+        #hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 80px;
+            background-color: #000000;
+        }
+        
+        .hero-content {
+            text-align: center;
+            max-width: 800px;
             margin: 0 auto;
         }
-        .skill {
-            background-color: #222;
-            color: #fff;
-            padding: 10px 15px;
-            border-radius: 8px;
-            font-weight: bold;
-            box-shadow: 0px 0px 10px rgba(255, 204, 0, 0.5);
-            transition: transform 0.3s ease-in-out;
-        }
-        .skill:hover {
-            transform: scale(1.1);
-        }
-	    
-/* Projects Section */
-.projects-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    justify-content: center;
-    width: 100%;
-    padding: 0 10px; 
-}
-
-.project {
-    background-color: #222;
-    padding: 15px;
-    width: 50%;
-    max-width: 600px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(255, 204, 0, 0.5);
-    transition: transform 0.3s ease-in-out;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-height: 180px;
-    text-align: center;
-}
-
-.project:hover {
-    transform: scale(1.05);
-}
-        .project a {
-            color: #ffcc00;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .project p {
-            font-size: 14px;
-            line-height: 1.4;
-        }
-	.project-thumbnail {
-    width: 50px;
-    height: 50px;
-    border-radius: 5px;
-    margin-right: 10px;
-}
-	
-/* Contact Section */
-.contact-section {
-    display: flex;
-    justify-content: center;
-    gap: 30px; 
-    margin-top: 40px;
-}
-
-.contact-section a {
-    font-size: 2.5em; 
-    color: #ffcc00; 
-    text-decoration: none;
-    background-color: #111;
-    width: 70px;
-    height: 70px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%; 
-    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out, background-color 0.3s ease-in-out;
-}
-
-.contact-section a:hover {
-    color: #000; 
-    background-color: #ffcc00; 
-    transform: scale(1.2); 
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .contact-section {
-        gap: 15px;
-    }
-    
-    .contact-section a {
-        font-size: 2em;
-        width: 60px;
-        height: 60px;
-    }
-    .project {
-        width: 90%;
-        padding: 10px; 
-    }
-    
-    .projects-container {
-        padding: 0 5px; 
-    }
-}
-@media (max-width: 480px) {
-    .project {
-        width: 100%; 
-        padding: 8px; 
-    }
-}
-/* Footer */
-        footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: #222; 
-  text-align: center;
-  font-size: 0.7em;
-  padding: 10px 0;
-}
-</style>
-</head>
-	
-<body>
-<header class="relative w-full bg-[#000000] text-white shadow-lg z-50 p-2">
-    <div class="flex justify-between items-center">
-        <!-- Left Side: 'Febi Sarju' -->
-        <div class="text-lg font-bold text-yellow-500">
-            Febi Sarju
-        </div>
         
-        <!-- Right Side: Navigation -->
-        <nav>
-            <ul class="flex space-x-4 text-yellow-500 ml-auto text-sm">
-                <li><a class="hover:text-yellow-300" href="#about">ABOUT</a></li>
-                <li><a class="hover:text-yellow-300" href="#skills">SKILLS</a></li>
-                <li><a class="hover:text-yellow-300" href="#projects">PROJECTS</a></li>
-                <li><a class="hover:text-yellow-300" href="#contact">CONTACT</a></li>
-                <li><a class="hover:text-yellow-300" href="more.html">MORE</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>  
-  <main class="flex flex-col items-center justify-center min-h-screen text-center">
-   <div class="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-8">
-    <div class="rounded-full border-2 border-yellow-500 overflow-hidden w-100 h-100">
-     <img alt="profile" class="w-full h-full object-cover" src="profile/images/profile.jpg"/>
-    </div>
-    <div class="text-left" style="padding-left: 330px;">
-     <p class="typing"; style="font-size: 1.2em; color: #ffcc00"><br> HELLO! </p>  
-        <p style="font-size: 3.3em"> I'm <b style="color: #ffcc00">Febi Sarju</b><br></p>  
-        <div><p style="font-size: 1.7em;"><br> <b> • </b> A Data Analyst <br> 
-        <b> • </b> An Aspiring Data Scientist<br></p>
-  </div>  </div></div>
-     <div class="buttons" style="padding-left: 730px;">
-                <a href="https://github.com/febisarju/" target="_blank" class="button">MY WORKS</a>
-                <a href="https://drive.google.com/file/d/1h9JvukBlORlBVb9D7vtoiFgGG6yO52bt/view?usp=sharing" target="_blank" class="button">RESUME</a>
-            </div>	    
-  </main> <br>
-  
-    <!-- About Me -->
-    <section id="about" class="fade-in">
-	
-         <h2 class="text-2xl font-bold text-yellow-500 mb-4">About Me</h2>
-        <p> Fueled by coffee ☕, powered by data 📊!<br>
-	As a <b>Data Analyst & Aspiring Data Scientist</b>, I dive deep into messy datasets so you don’t have to.
-	Skilled in <b>SQL, Python, Power BI and Machine Learning</b>, I turn numbers into insights and then into action.
-	When I’m not analyzing data, I’m probably optimizing my caffeine intake.
-	Turning data chaos into clarity- one dataset at a time! 🚀
-        </p>
-    </section><br>
-	    
-<!-- Skills Section -->
-<section id="skills" class="fade-in">
-    <h2 class="text-2xl font-bold text-yellow-500 mb-4">Skills</h2>
-    <div class="skills-container">
-        <span class="skill">Python</span>
-	<span class="skill">R</span>
-	<span class="skill">C</span>
-        <span class="skill">SQL</span>
-	<span class="skill">Microsoft Excel</span>
-	<span class="skill">NoSQL</span>
-	<span class="skill">Data Visualization</span>
-	<span class="skill">Microsoft Power BI</span>
-	<span class="skill">Data analysis</span>
-        <span class="skill">Machine Learning</span>
-	<span class="skill">Deep Learning</span>
-   	<span class="skill">Predictive Analysis</span>      
-        <span class="skill">Statistical Analysis</span>
-        <span class="skill">Mathematics</span>
-        <span class="skill">Web Design (HTML)</span>		
-</section> <br>   
-    <!-- Projects -->
-    <section id="projects" class="fade-in">
-        <h2 class="text-2xl font-bold text-yellow-500 mb-4">Projects</h2>
-<div class="about"> <p> I love to solve real-world problems &amp; uncover hidden data stories.<br><br> </p>
-</div>
-        <div class="projects-container">
-	   <div class="project">
-    <h2><b>🏎️ RaceCraft 2025: The F1 Prediction Engine</b></h2>
-    <p>A machine learning project predicting Formula 1 race outcomes for the 2025 season with real-time updates and interactive visualizations.</p>
-                <a href="https://github.com/febisarju/RaceCraft2025" target="_blank">View Project</a>
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .hero-content p {
+            font-size: 1.25rem;
+            color: var(--gray-color);
+            margin-bottom: 2rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 0.5rem 1.5rem;
+            border-radius: 0.25rem;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: #000000;
+            border: 1px solid var(--primary-color);
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--primary-hover);
+            border-color: var(--primary-hover);
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+            margin-left: 1rem;
+        }
+        
+        .btn-outline:hover {
+            background-color: var(--primary-color);
+            color: #000000;
+        }
+        
+        /* About Section */
+        .section {
+            padding: 5rem 0;
+            background-color: #000000;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+        
+        .about-content {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 3rem;
+        }
+        
+        .about-img {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+        }
+        
+        .about-img img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 0.5rem;
+            box-shadow: 0 0.5rem 1rem rgba(255,255,255,0.1);
+        }
+        
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .about-text h3 {
+            font-size: 1.75rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        
+        .about-text p {
+            margin-bottom: 1rem;
+            color: var(--gray-color);
+        }
+        
+        .skills {
+            margin-top: 2rem;
+        }
+        
+        .skills h4 {
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+        
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        
+        .skill-tag {
+            background-color: var(--primary-color);
+            color: #000000;
+            padding: 0.375rem 0.75rem;
+            border-radius: 0.25rem;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+        
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .project-card {
+            background-color: #121212;
+            border-radius: 0.5rem;
+            overflow: hidden;
+            box-shadow: 0 0.5rem 1rem rgba(255,255,255,0.1);
+            transition: transform 0.3s;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .project-card:hover {
+            transform: translateY(-0.5rem);
+            border-color: var(--primary-color);
+        }
+        
+        .project-img {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .project-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .project-card:hover .project-img img {
+            transform: scale(1.05);
+        }
+        
+        .project-info {
+            padding: 1.5rem;
+        }
+        
+        .project-info h3 {
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        
+        .project-info p {
+            margin-bottom: 1rem;
+            color: var(--gray-color);
+        }
+        
+        .project-links {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        /* Contact Section */
+        #contact {
+            background-color: #121212;
+            color: white;
+        }
+        
+        #contact .section-title {
+            color: white;
+        }
+        
+        .contact-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 3rem;
+        }
+        
+        .contact-info {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .contact-info h3 {
+            font-size: 1.75rem;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+        
+        .contact-details {
+            margin-bottom: 2rem;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .contact-item i {
+            margin-right: 1rem;
+            font-size: 1.25rem;
+            color: var(--primary-color);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+        
+        .social-links a {
+	    font-size: 2em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 70px;
+            height: 70px;
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            transition: all 0.3s;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--primary-color);
+            color: #000000;
+        }
+        
+        .contact-form {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: none;
+            border-radius: 0.25rem;
+            background-color: rgba(255,255,255,0.1);
+            color: white;
+        }
+        
+        .form-group textarea {
+            height: 150px;
+            resize: vertical;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #000000;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background-color: #121212;
+                flex-direction: column;
+                align-items: center;
+                padding: 1rem 0;
+                box-shadow: 0 2px 5px rgba(255,255,255,0.1);
+                transform: translateY(-150%);
+                transition: transform 0.3s;
+            }
+            
+            .nav-links.active {
+                transform: translateY(0);
+            }
+            
+            .nav-links li {
+                margin: 0.5rem 0;
+            }
+            
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">Febi Sarju</a>
+                <ul class="nav-links">
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Hi! I'm Febi</h1>
+                <p>WELCOME TO MY WEBPAGE! <br><br> I am passionate about transforming complex data into actionable insights that data-driven decisions.</p>
+                <div>
+                    <a href="#projects" class="btn btn-outline">View My Work</a>
+                    <a href="#contact" class="btn btn-outline">Contact Me</a>
+                </div>
+		<div><br><a href="https://drive.google.com/file/d/1tn8JCuM1rHbTphn3vzm_GFIwVdeRkCbw/view?usp=drivesdk" class="btn btn-primary">Resume</a></div>
             </div>
-	<div class="project">
-		<img src="https://private-user-images.githubusercontent.com/146759828/429131394-9f947075-31c1-4a84-831f-bbb5eac237c2.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDM1Mjk2NzEsIm5iZiI6MTc0MzUyOTM3MSwicGF0aCI6Ii8xNDY3NTk4MjgvNDI5MTMxMzk0LTlmOTQ3MDc1LTMxYzEtNGE4NC04MzFmLWJiYjVlYWMyMzdjMi5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwNDAxJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDQwMVQxNzQyNTFaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1lNGVjY2FjZmM2YjZlZTZjYmQxNWUwNDFmYTM5ZDA4YWM3MGE4MmJmNDExZmM2MGNjNGU3NmNmOTY2YTgzMDBjJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.zWsNPlV-RPr04XhJSHWYTd0gTENjvwHEpacJQ-W8fGo" alt="Project Image"><br>
-                <h2><b>📈 TradeSmart: Stock Market trends & predictions</b></h2>
-                <p>Built a machine learning-powered stock prediction model with Random Forest and Flask API for real-time forecasts with a historical dataset. Also, created streamlit with live stock data (yfinance).</p>
-                <a href="https://github.com/febisarju/TradeSmart" target="_blank">View Project</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-img">
+                    <img src="profile/images/profile.jpg" alt="Photo">
+                </div>
+                <div class="about-text">
+                    <h3>Aspiring Data Analyst & Data Scientist</h3>
+                    <p>☕ Fueled by coffee | 📊 Powered by data | 🔍 Insight Hunter<br><br>
+		    I specialize in transforming messy datasets into clear, actionable business intelligence. With expertise in <b>SQL, Python, Power BI, and Machine Learning</b>, I bridge 	            the gap between raw numbers and strategic decisions.<br><br>
+		    When I'm not wrangling data into submission, you'll find me optimizing my caffeine intake or exploring the latest in data science. <br><b>My mission:</b> Turning data     		    chaos into clarity—one query at a time!<br><br>
+		    My analytical journey began in college and I've been passionately honing my skills ever since to master emerging technologies in this fast-evolving field.</p>        
+                    <div class="skills">
+                        <h4>My Skills</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">R</span>
+                            <span class="skill-tag">C</span>
+                            <span class="skill-tag">SQL</span>
+                            <span class="skill-tag">Microsoft Excel</span>
+                            <span class="skill-tag">Microsoft PowerBI</span>
+                            <span class="skill-tag">Data analysis</span>
+			    <span class="skill-tag">Data Visualization</span>
+                            <span class="skill-tag">Machine Learning</span>
+                            <span class="skill-tag">Deep Learning</span>
+                            <span class="skill-tag">Predictive Analysis</span>
+			    <span class="skill-tag">Statistical Analysis</span>
+		 	    <span class="skill-tag">Mathematics</span>
+			    <span class="skill-tag">HTML</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-	    <div class="project">
-		<img src="https://private-user-images.githubusercontent.com/146759828/429140409-bb679c6f-01ef-49e8-bc93-df73a43ed803.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDM1Mjk3MDIsIm5iZiI6MTc0MzUyOTQwMiwicGF0aCI6Ii8xNDY3NTk4MjgvNDI5MTQwNDA5LWJiNjc5YzZmLTAxZWYtNDllOC1iYzkzLWRmNzNhNDNlZDgwMy5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwNDAxJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDQwMVQxNzQzMjJaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1kMjU1NTkxYzM5YjMyNmMyNTUxODZlZmYwOTc0Njc3MDdhY2YzNzZkYjY3MWRiMTA4OGU3ZTVjZDdjZDFlNTMwJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.7eFn8HO6kGLVIQaOWkSJtScChAAeA0PvIyPSW8z9jcU" alt="Project Image"><br>
-                <h2><b>🚖 UberRide: Unlocking Ride Patterns & Predictions</b></h2>
-                <p>Built a time-series forecasting model using XGBoost, GBRT, and Random Forest to predict Uber trip demand. Implemented feature engineering, ensemble learning and Power BI visualizations for insights.</p>
-                <a href="https://github.com/febisarju/UberRide" target="_blank">View Project</a>
-            </div>
-            <div class="project">
-		<img src="https://private-user-images.githubusercontent.com/146759828/429137739-a650988c-2a74-4dd0-ab2d-a0849b3e2d2c.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDM1Mjk3NDcsIm5iZiI6MTc0MzUyOTQ0NywicGF0aCI6Ii8xNDY3NTk4MjgvNDI5MTM3NzM5LWE2NTA5ODhjLTJhNzQtNGRkMC1hYjJkLWEwODQ5YjNlMmQyYy5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwNDAxJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDQwMVQxNzQ0MDdaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT02MDYyZGQwMTgyMzBlOTMxZDI5ZDhlZWFlYWJmN2FjMmE3MTI3NmJlZDJhMTExYmE3ZmRhODkzMTRlNGMzY2FlJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.j0AX50hq0dCzJtWZiZOMeo1EAvg9Vw3R-1mzcqOGESc" alt="Project Image"><br>
-               <h2><b>💳 FraudScan Analytics</b></h2>
-                <p>This project detects fraudulent transactions using SQL and Power BI, analyzing spending patterns and high-risk customers with visual insights.</p>
-                <a href="https://github.com/febisarju/FraudScan" target="_blank">View Project</a>
-            </div>
-	            <div class="project">
-		<img src="https://private-user-images.githubusercontent.com/146759828/429136837-6d134862-15d1-4925-b691-95c17be15925.jpg?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDM1Mjk3NzksIm5iZiI6MTc0MzUyOTQ3OSwicGF0aCI6Ii8xNDY3NTk4MjgvNDI5MTM2ODM3LTZkMTM0ODYyLTE1ZDEtNDkyNS1iNjkxLTk1YzE3YmUxNTkyNS5qcGc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwNDAxJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDQwMVQxNzQ0MzlaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT03M2YyMzk2NmFmMGY4ODFjYTA5MWU1MWExMTViZDQ5ODcwMzRmNWMzMDM4NzJmZjQ1ZTViYjI5NDdjZDM3ZTlkJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.-EUHPWlvTWUXndyQLtaL6x8ZN95PRposvjE84glmHYc" alt="Project Image"><br>
-                <h2><b>🚀 SpaceXplorer: Launch Insights</b></h2>
-                <p>Developed a SpaceX Launch Dashboard with Streamlit, SQL & Plotly, integrating real-time API data for interactive analysis of launch trends, success rates, mission insights, etc.</p>
-                <a href="https://github.com/febisarju/SpaceXplorer" target="_blank">View Project</a>
-            </div>
-            <div class="project">
-		<img src="https://private-user-images.githubusercontent.com/146759828/421029329-4d9fc29d-1afd-4d82-935d-cf038d930907.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDM1Mjk4MDYsIm5iZiI6MTc0MzUyOTUwNiwicGF0aCI6Ii8xNDY3NTk4MjgvNDIxMDI5MzI5LTRkOWZjMjlkLTFhZmQtNGQ4Mi05MzVkLWNmMDM4ZDkzMDkwNy5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwNDAxJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDQwMVQxNzQ1MDZaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT00MGYxOTUyNzU1ZmViZTQ4NjFkNzVhMzk2NTI2NDdjYmQ2NDY1NTJhNjdhMDU4N2E0NDYzNTY1MDc5Yjg5MGMwJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.m5swwPpH1CWbmPeQtoFDUTd3KiwvdZFsSpDgJ0KvFao" alt="Project Image"><br>
-                <h2><b>🕵️‍♂️ CurrencyGuard: Counterfeit Detection</b></h2>
-                <p>This project implements a currency detection system to distinguish between real and counterfeit Indian currency notes by Convolutional Neural Network (CNN) using python programming language as back-end and graphical user interface (GUI) as front-end.</p>
-                <a href="https://github.com/febisarju/CurrencyGuard" target="_blank">View Project</a>
-            </div>
-	     <div class="project">
-		<img src="https://private-user-images.githubusercontent.com/146759828/421028137-1c62e80c-c0c5-4b3e-8374-c7617610434f.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDM1Mjk4MzgsIm5iZiI6MTc0MzUyOTUzOCwicGF0aCI6Ii8xNDY3NTk4MjgvNDIxMDI4MTM3LTFjNjJlODBjLWMwYzUtNGIzZS04Mzc0LWM3NjE3NjEwNDM0Zi5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwNDAxJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDQwMVQxNzQ1MzhaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0zYzM5NTdmOTkzNmIyOGU0ZmRiOTJhM2Q3Yzc0NDVhNjBmYzcyNWZkYWRiMjQ4NTg5N2RiYWE3NjdiODU3ZmZkJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9._ZAReWPXPLSpGj3_iCDBqe7ALOopGB511zq05PVJzWo" alt="Project Image"><br>
-                <h2><b>📋 Dotify: Task Manager</b></h2>
-                <p>Developed a responsive and interactive To-Do List web application using HTML and CSS. The application enables users to add, prioritize and manage tasks efficiently.</p>
-                <a href="https://github.com/febisarju/Dotify" target="_blank">View Project</a>
-            </div>
-        </div></section>
-<br><br><br><a href="https://github.com/febisarju" target="_blank" class="button">View More Projects on my Github</a>
-<br><br><br><br><br><br><br>
-<img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExdnJnNHp4YTRmMjhra2pycWp1dmhlMWl6NzVwenRubGpvdG9sdHAwYSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/SvckSy7fFviqrq8ClF/giphy.gif" alt="Centered Image" style="width:330px; height:330px; display:block; margin:0 auto;"><br><br><br><br><br>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title">My Projects</h2>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="https://www.f1-fansite.com/wp-content/uploads/2024/08/4-sunday-spa-francorchamps-2024-454x244.jpg" alt="Project 1">
+                    </div>
+                    <div class="project-info">
+                        <h3>🏎️ RaceCraft 2025: The F1 Prediction Engine</h3>
+                        <p>A machine learning project that predicts Formula 1 race times using qualifying and sector data, visualized through an interactive Streamlit dashboard.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/febisarju/RaceCraft2025" class="btn btn-primary">View</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="https://pixelz.cc/wp-content/uploads/2018/08/stock-market-electronic-chart-bullish-uhd-4k-wallpaper.jpg" alt="Project 2">
+                    </div>
+                    <div class="project-info">
+                        <h3>📈 TradeSmart: Stock Market trends & predictions</h3>
+                        <p>A machine learning-powered stock prediction model to analyze market trends and predict future market behavior with a historical dataset and live stock data 				(yfinance).</p> 
+                        <div class="project-links">
+                            <a href="https://github.com/febisarju/TradeSmart" class="btn btn-primary">View</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="https://www.nice.com/_next/image?url=https%3A%2F%2Fresources.nice.com%2Fwp-content%2Fuploads%2F2024%2F02%2Frta-proactive-fraud-detection-the-whole-is-			greater-than-the-sum-of-its-parts-2460.png&w=1920&q=80" alt="Project 3">
+                    </div>
+                    <div class="project-info">
+                        <h3>💳 FraudScan Analytics</h3>
+                        <p>This project detects fraudulent transactions using SQL and Power BI, analyzing spending patterns and high-risk customers with visual insights.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/febisarju/FraudScan" class="btn btn-primary">View</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="https://www.shutterstock.com/image-vector/car-pin-phone-hands-auto-600nw-2492319943.jpg" alt="Project 4">
+                    </div>
+                    <div class="project-info">
+                        <h3>🚖 UberRide: Unlocking Ride Patterns & Predictions</h3>
+                        <p>A machine learning project that analyzes Uber trip data to identify patterns and build a predictive model for trip demand.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/febisarju/UberRide" class="btn btn-primary">View</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="https://media.istockphoto.com/id/1491747616/photo/16-may-2023-pune-india-indian-currency-500-rupees-banknotes-business-background-india-economy.jpg?s=			612x612&w=0&k=20&c=EscY13iorwIXO_1FcWv-3FHLceOTnAKlQR3oEDqU5r8=" alt="Project 5">
+                    </div>
+                    <div class="project-info">
+                        <h3>🕵️‍♂️ CurrencyGuard: Counterfeit Detection for Indian notes</h3>
+                        <p>A currency detection system to distinguish between real and counterfeit Indian currency notes by CNN using Python as back-end and graphical user interface (GUI) 			as front-end.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/febisarju/CurrencyGuard" class="btn btn-primary">View</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="https://c0.wallpaperflare.com/preview/34/705/139/tasks-plan-target-list.jpg" alt="Project 6">
+                    </div>
+                    <div class="project-info">
+                        <h3>📋 Dotify: Task Manager</h3>
+                        <p>A responsive and interactive To-Do List web application using HTML and CSS. The application enables users to add, prioritize and manage tasks efficiently.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/febisarju/Dotify" class="btn btn-primary">View</a>
+                        </div>
+                    </div>
+                </div>   
+	      </div>    
+	      <div style="text-align: center; margin-top: 30px;">
+   	      <a href="https://github.com/febisarju?tab=repositories&type=source" class="btn btn-outline">View more projects</a>
+	      </div>     
+        </div>
+    </section>
 
     <!-- Contact Section -->
-<section id="contact" class="fade-in">
-    <h2 class="text-2xl font-bold text-yellow-500 mb-4">Contact</h2>
-    <p>Below are the details to reach out to me!</p>
-
-    <div class="contact-section">
-    <a href="https://www.google.com/maps/place/Bangalore" target="_blank">
-        <i class="fas fa-map-marker-alt"></i>
-    </a>
-    <a href="mailto:febi.sarju@gmail.com">
-        <i class="fas fa-envelope"></i>
-    </a>
-    <a href="https://www.linkedin.com/in/febi-sarju/" target="_blank">
-        <i class="fab fa-linkedin"></i>
-    </a>
-    <a href="https://github.com/febisarju" target="_blank">
-        <i class="fab fa-github"></i>
-    </a>
-    <a href="https://www.instagram.com/febi.sarju/?hl=en" target="_blank">
-        <i class="fab fa-instagram"></i>
-    </a>
-</div>
-
-</section>
-<section><br><br><br></section>
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Contact</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Get In Touch</h3>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>febi.sarju@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+91-8891858017</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+965-66970893</span>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://github.com/febisarju"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/febi-sarju/"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/febi.sarju/?hl=en"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 by Febi Sarju | Portfolio</p>
+        <div class="container">
+            <p>&copy; 2023 Harsh. All rights reserved.</p>
+        </div>
     </footer>
 
+    <script>
+        // Mobile Menu Toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+        
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+        
+        // Smooth Scrolling for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Form Submission
+        const form = document.querySelector('form');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you for your message! I will get back to you soon.');
+            form.reset();
+        });
+    </script>
 </body>
 </html>
